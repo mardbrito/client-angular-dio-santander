@@ -45,8 +45,11 @@ export class UpdateRoomComponent implements OnInit {
     this.updateRoom();    
   }
 
-  gotoList() {
-    this.router.navigate(['/rooms']);
+  gotoList() {    
+    this.router.navigate(['/rooms'])
+    .then(() => {
+      window.location.reload();
+    });
   }
 
 }

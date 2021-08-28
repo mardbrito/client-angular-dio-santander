@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
-import { RoomDetailsComponent } from '../room-details/room-details.component';
 import { RoomService } from '../room.service';
 import { Room } from '../room';
 
