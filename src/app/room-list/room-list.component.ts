@@ -18,11 +18,11 @@ export class RoomListComponent implements OnInit {
   constructor(private roomService: RoomService,
               private router: Router ) { }
 
-  ngOnInit(): void {
-    
+  ngOnInit() {
+    this.reloadData();    
   }
 
-  reloadData(){
+  reloadData() {
     this.rooms = this.roomService.getRoomsList();
   }
 
@@ -36,11 +36,11 @@ export class RoomListComponent implements OnInit {
         error => console.log(error));
   }
 
-  roomDetails(id: number){
+  roomDetails(id: number) {
     this.router.navigate(['details', id]);
   }
 
-  updateRoom(id: number){
+  updateRoom(id: number) {
     this.router.navigate(['update', id]);
   }
 
